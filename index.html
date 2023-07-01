@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Sweet Alert2 style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.12/sweetalert2.css" integrity="sha512-K0TEY7Pji02TnO4NY04f+IU66vsp8z3ecHoID7y0FSVRJHdlaLp/TkhS5WDL3OygMkVns4bz0/ah4j8M3GgguA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="form">
         <h1>Excel Sheet Generator</h1>
-        <input type="number" class="rows" placeholder="Enter number of rows">
-        <input type="number" class="columns" placeholder="Enter number of columns">
+        <input type="number" min="1" class="rows" placeholder="Enter number of rows">
+        <input type="number" min="1" class="columns" placeholder="Enter number of columns">
         <div class="btns">
             <button onclick="generateTable()">Generate</button>
             <button onclick="ExportToExcel('xlsx')">Export</button>
@@ -27,5 +29,6 @@
     </div>
 </body>
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.12/sweetalert2.min.js"></script>
 <script src="./script.js"></script>
 </html>

@@ -1,9 +1,7 @@
-/* https://coolors.co/db2b39-29335c-f3a712-5aff15-aaffe5 */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    position: relative;
     outline: none;
     font-family: 'Bitter', serif;
 }
@@ -34,7 +32,6 @@ body{
 }
 .form .btns{
     display: flex;
-    flex-direction: row;
     gap: 10px;
 }
 .form button{
