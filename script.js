@@ -1,7 +1,7 @@
 let table = document.querySelector(".sheet-body");
 rows = document.querySelector(".rows");
 columns = document.querySelector(".columns");
-tableExists = false
+
 
 const generateTable = () => {
     let rowsNumber = parseInt(rows.value), columnsNumber = parseInt(columns.value)
@@ -21,14 +21,11 @@ const generateTable = () => {
         }
         table.innerHTML += tableRow
     }
-    if(rowsNumber>0 && columnsNumber>0){
-        tableExists = true
-    }
 }
 
 const ExportToExcel = (type, fn, dl) => {
     let handler;
-    if(!tableExists){
+    if(table.innerHTML === ""){
         clearTimeout(handler)
         Swal.fire({
             icon: 'error',
